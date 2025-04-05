@@ -1,0 +1,7 @@
+local virtualUser = game:service("VirtualUser")
+local player = game:service("Players").LocalPlayer
+
+player.Idled:Connect(function()
+    virtualUser:CaptureController()
+    virtualUser:ClickButton2(Vector2.new())
+end)
